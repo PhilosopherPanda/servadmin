@@ -11,11 +11,16 @@ if (!$tescon){
 
 $query = "SELECT * FROM users";
 $res = $tescon->query($query);
+$count = 0;
 
 if ($res->num_rows > 0){
         while($row = $res->fetch_assoc()){
                 echo "ID: ".$row["ID"]."  Nama: ".$row["Nama"]."    Kantor: ".$row["Kantor"]."<br>";
+		$count = $count++;
         }
+	echo "total user:".$count;
+}else{
+	echo "total user:".$count;
 }
 
 $tescon->close();
