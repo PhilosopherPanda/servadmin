@@ -2,6 +2,7 @@
 
 echo "test database";
 echo "<br>";
+echo "estartsa";
 
 $tescon = mysqli_connect("172.17.0.2","root","testing","Trucorpdb");
 if (!$tescon){
